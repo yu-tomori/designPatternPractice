@@ -3,14 +3,16 @@ import framework.*;
 import java.util.*;
 
 public class IDCardFactory extends Factory {
-    private List owners = new ArrayList();
+    private HashMap database = new HashMap();
+    private int serial = 100;
     protected Product createProduct(String owner) {
-        return new IDCard(owner);
+        return new IDCard(owner, serial++);
     }
     protected void registerProduct(Product product) {
-        owners.add(((IDCard)product).getOwner());
+        IDCard card = (IDCard)product;
+        database.put(card.getSerial(), card.getOwner());
     }
-    public List getOwners() {
-        return owners;
+    public HashMap getDatabase() {
+        return database;
     }
 }
