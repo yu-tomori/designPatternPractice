@@ -1,7 +1,7 @@
 
 import java.io.*;
 
-public class HTMLBuilder extends Builder {
+public class HTMLBuilder implements Builder {
     private String filename;
     private PrintWriter writer;             // Java組み込みのクラス
     public void makeTitle(String title) {
