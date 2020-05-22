@@ -4,8 +4,8 @@ public class Director {
         this.builder = builder;
     }
     public void construct() {
-        builder.makeTitle("Greeting");
         builder.makeString("朝から昼にかけて");
+        builder.makeTitle("Greeting");
         builder.makeItems(new String[]{
             "おはようございます。 ",
             "こんにちは。 ",
