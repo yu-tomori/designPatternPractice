@@ -16,6 +16,12 @@ public class Main {
             director.construct();
             String filename = htmlbuilder.getResult();
             System.out.println(filename + "が作成されました。");
+        } else if (args[0].equals("underlined")) {
+            UnderlinedTextBuilder underlined = new UnderlinedTextBuilder();
+            Director director = new Director(underlined);
+            director.construct();
+            String result = underlined.getResult();
+            System.out.println(result);
         } else {
             usage();
             System.exit(0);
