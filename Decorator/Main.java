@@ -14,7 +14,19 @@ public class Main {
                     , '*')
                 )
             ), '/');
-
         b4.show();
+
+        Display b5 = new FullBorder(
+            new UpDownBorder(
+                new SideBorder(
+                    new UpDownBorder(
+                        new SideBorder(
+                            new StringDisplay("Hello, world."), '*'
+                        ), '='
+                    ), '|'
+                ), '/'
+            )
+        );
+        b5.show();
     }
 }
