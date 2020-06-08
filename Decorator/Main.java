@@ -28,5 +28,17 @@ public class Main {
             )
         );
         b5.show();
+
+        MultiStringDisplay md = new MultiStringDisplay();
+        md.add("hello, world.");
+        md.add("hay, world.");
+        md.add("goog night, world.");
+        md.show();
+
+        Display d1 = new SideBorder(md, '#');
+        d1.show();
+
+        Display d2 = new FullBorder(md);
+        d2.show();
     }
 }
