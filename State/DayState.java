@@ -9,6 +9,9 @@ public class DayState implements State {
         if (hour < 9 || 17 <= hour) {
             context.changeState(NightState.getInstance());
         }
+        if (hour == 12) {
+            context.changeState(LunchState.getInstance());
+        }
     }
     public void doUse(Context context) {
         context.recordLog("金庫使用(昼間)");
