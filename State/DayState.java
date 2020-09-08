@@ -18,6 +18,7 @@ public class DayState implements State {
     }
     public void doAlarm(Context context) {
         context.callSecurityCenter("非常ベル(昼間)");
+        context.changeState(EmergentState.getInstance());
     }
     public void doPhone(Context context) {
         context.callSecurityCenter("通常の通話(昼間)");

@@ -15,6 +15,7 @@ public class NightState implements State {
     }
     public void doAlarm(Context context) {
         context.callSecurityCenter("非常ベル(夜間)");
+        context.changeState(EmergentState.getInstance());
     }
     public void doPhone(Context context) {
         context.recordLog("夜間の通話録音");

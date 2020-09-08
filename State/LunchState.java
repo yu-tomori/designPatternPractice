@@ -15,6 +15,7 @@ public class LunchState implements State {
     }
     public void doAlarm(Context context) {
         context.callSecurityCenter("非常ベル(昼食時)");
+        context.changeState(EmergentState.getInstance());
     }
     public void doPhone(Context context) {
         context.callSecurityCenter("留守電(昼食時の通話)");
